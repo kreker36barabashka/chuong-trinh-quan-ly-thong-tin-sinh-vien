@@ -1,5 +1,7 @@
 FROM node:14
 
+# Sử dụng Node.js phiên bản 14 làm hình ảnh cơ sở
+
 # Tạo thư mục làm việc
 WORKDIR /usr/src/app
 
