@@ -5,14 +5,14 @@ FROM node:14
 # Tạo thư mục làm việc
 WORKDIR /usr/src/app
 
-# Sao chép package.json và cài đặt dependencies
+# Sao chép file package.json và package-lock.json, sau đó cài đặt các dependencies cần thiết
 COPY package*.json ./
 RUN npm install --production
 
-# Sao chép mã nguồn ứng dụng vào trong hình ảnh
+# Sao chép toàn bộ mã nguồn ứng dụng vào hình ảnh
 COPY . .
 
-# Cho phép truy cập vào cổng 5000
+# Cho phép truy cập vào cổng 5000, nơi ứng dụng sẽ hoạt động
 EXPOSE 5000
 
 # Lệnh khởi động ứng dụng khi hình ảnh được chạy
