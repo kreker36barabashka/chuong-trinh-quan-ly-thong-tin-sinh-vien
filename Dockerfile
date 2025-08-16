@@ -10,7 +10,7 @@ RUN npm install
 # Sao chép mã nguồn ứng dụng
 COPY . .
 
-# Expose cổng ứng dụng
+# Hoạt động trên cổng 5000
 EXPOSE 5000
 
 # Lệnh khởi động ứng dụng
