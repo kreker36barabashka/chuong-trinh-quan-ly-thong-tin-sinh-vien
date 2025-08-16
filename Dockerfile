@@ -9,11 +9,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --production
 
-# Sao chép mã nguồn ứng dụng
+# Sao chép mã nguồn ứng dụng vào trong hình ảnh
 COPY . .
 
-# Hoạt động trên cổng 5000
+# Cho phép truy cập vào cổng 5000
 EXPOSE 5000
 
-# Lệnh khởi động ứng dụng
+# Lệnh khởi động ứng dụng khi hình ảnh được chạy
 CMD [ "node", "backend/server.js" ]
